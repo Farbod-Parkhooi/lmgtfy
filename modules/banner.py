@@ -46,6 +46,7 @@ def banner():
     print(f"{Fore.CYAN + banners[rand]}")
     print(f"{Style.DIM}                Let Me Google It For You!                {RESET}")
 def get_opts():
+    print(f"{Fore.WHITE}[{Fore.YELLOW}!{Fore.WHITE}]{Fore.GREEN} We save the history in '{Fore.LIGHTBLUE_EX}log/history.txt{Fore.GREEN}'{Fore.WHITE}.")
     query = input(f"{Fore.WHITE}[{Fore.YELLOW}+{Fore.WHITE}] {Fore.GREEN}Please write your query{Fore.WHITE}: {RESET}")
     print(f"{Fore.WHITE}[{Fore.YELLOW}+{Fore.WHITE}]{Fore.GREEN} The URL is: '{Fore.LIGHTBLUE_EX}{query}{Fore.GREEN}'{Fore.WHITE}. {RESET}")
     sp(3)
