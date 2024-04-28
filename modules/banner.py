@@ -1,3 +1,4 @@
+from modules import open
 from colorama import init, Fore, Back, Style
 from random import randint
 from os import system 
@@ -45,6 +46,10 @@ def banner():
     print(f"{Fore.CYAN + banners[rand]}")
     print(f"{Style.DIM}                Let Me Google It For You!                {RESET}")
 def get_opts():
-    URL = input(f"{Fore.WHITE}[{Fore.YELLOW}+{Fore.WHITE}] {Fore.GREEN}Please write your query{Fore.WHITE}: {RESET}")
-    print(f"{Fore.WHITE}[{Fore.YELLOW}+{Fore.WHITE}]{Fore.GREEN} The URL is: '{Fore.LIGHTBLUE_EX}{URL}{Fore.GREEN}'{Fore.WHITE}. {RESET}")
+    query = input(f"{Fore.WHITE}[{Fore.YELLOW}+{Fore.WHITE}] {Fore.GREEN}Please write your query{Fore.WHITE}: {RESET}")
+    print(f"{Fore.WHITE}[{Fore.YELLOW}+{Fore.WHITE}]{Fore.GREEN} The URL is: '{Fore.LIGHTBLUE_EX}{query}{Fore.GREEN}'{Fore.WHITE}. {RESET}")
     sp(3)
+    clear()
+    banner()
+    out_url = open.create_url(query=query)
+    print(f"{Fore.WHITE}[{Fore.YELLOW}+{Fore.WHITE}]{Fore.GREEN} Your URL is: '{Fore.LIGHTBLUE_EX}{out_url}{Fore.GREEN}'{Fore.WHITE}.{RESET}")
