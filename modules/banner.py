@@ -2,6 +2,7 @@ from colorama import init, Fore, Back, Style
 from random import randint
 from os import system 
 from platform import uname
+from time import sleep as sp
 init()
 RESET = Fore.RESET + Back.RESET + Style.RESET_ALL
 def clear():
@@ -43,3 +44,7 @@ def banner():
     rand = randint(0, (len(banners) - 1))
     print(f"{Fore.CYAN + banners[rand]}")
     print(f"{Style.DIM}                Let Me Google It For You!                {RESET}")
+def get_opts():
+    URL = input(f"{Fore.WHITE}[{Fore.YELLOW}+{Fore.WHITE}] {Fore.GREEN}Please write your query{Fore.WHITE}: {RESET}")
+    print(f"{Fore.WHITE}[{Fore.YELLOW}+{Fore.WHITE}]{Fore.GREEN} The URL is: '{Fore.LIGHTBLUE_EX}{URL}{Fore.GREEN}'{Fore.WHITE}. {RESET}")
+    sp(3)
