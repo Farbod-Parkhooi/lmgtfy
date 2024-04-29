@@ -48,8 +48,8 @@ def banner():
 def get_opts():
     print(f"{Fore.WHITE}[{Fore.YELLOW}!{Fore.WHITE}]{Fore.GREEN} We save the history in '{Fore.LIGHTBLUE_EX}log/history.txt{Fore.GREEN}'{Fore.WHITE}.")
     query = input(f"{Fore.WHITE}[{Fore.YELLOW}+{Fore.WHITE}] {Fore.GREEN}Please write your query{Fore.WHITE}: {RESET}")
-    print(f"{Fore.WHITE}[{Fore.YELLOW}+{Fore.WHITE}]{Fore.GREEN} The URL is: '{Fore.LIGHTBLUE_EX}{query}{Fore.GREEN}'{Fore.WHITE}. {RESET}")
-    sp(3)
+    print(f"{Fore.WHITE}[{Fore.YELLOW}+{Fore.WHITE}]{Fore.GREEN} The query is: '{Fore.LIGHTBLUE_EX}{query}{Fore.GREEN}'{Fore.WHITE}. {RESET}")
+    sp(1.5)
     clear()
     banner()
     out_url = open.create_url(query=query)
